@@ -6,10 +6,52 @@
     <body>
        <p></p>
       <script>
-        function convertToFahrenheit() {
-          console.log((25 * 9 / 5) + 32);
+        /*
+        function convertTempature(degrees, unit) {
+          if (unit === 'C') {
+          console.log(`'${(degrees * 9 / 5) + 32}F'`);
+          } else if (unit === 'F') {
+           console.log(`'${(degrees - 32) * 5 / 9}C'`);
+          }
         }
-        convertToFahrenheit();
+        convertTempature(25, 'C');
+        convertTempature(86, 'F');
+        */
+       /*
+        const result = '';
+        function convertTempature(degrees, unit) {
+          if (unit === 'C') {
+          const result = `'${(degrees * 9 / 5) + 32} F'`;
+          } else if (unit === 'F') {
+           const result = `'${(degrees - 32) * 5 / 9} C'`;   
+          }
+          return(result);
+          console.log(result);
+        }
+        convertTempature(25, 'C');
+        convertTempature(86, 'F');
+        */ 
+        function convertToFahrenheit(celcius) {
+         return (celcius * 9 / 5) + 32;
+        }
+     
+        function convertToCelcius(fahreneit) {
+        return ((86-32) * 5 / 9);
+        }
+
+       function convertTempature(degrees, unit) {
+        if (unit === 'C') {
+          const result = convertToFahrenheit(degrees);
+          return `'${result}F'`;
+        } else if (unit === 'F'){
+          const result = convertToCelcius(degrees);
+          return `'${result}C'`;
+        }
+        }
+        console.log (convertTempature(25, 'C'));
+        console.log (convertTempature(86, 'F'));
+     
+
       </script>
     </body>
 </html>
