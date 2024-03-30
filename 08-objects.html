@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+      const product= {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(product); // {name: 'socks', price: 1090}
+      console.log(typeof product); // object
+      console.log(product.name); // name
+      console.log(product.price); // 1090
+      //  vvv  to change the value associated with the nameproperty to cotton socks. vvv // 
+      product.name ='cottton socks'; 
+      console.log(product); // {name: 'cottton socks', price: 1090}
+      product.newProperty = true;
+      console.log(product); // {name: 'cottton socks', price: 1090, newProperty: true}
+
+      delete product.newProperty; //delete new property from the object.
+      console.log(product); // {name: 'cottton socks', price: 1090}
+      */
+     const product2 = {
+        name: 'shirt',
+        ['delivery-time']: '1 day',
+        rating: { //nested object, object inside an object
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1(){ //functions are also values and we can save them in an object. 
+          console.log('function inside object');
+        }
+     };
+     console.log(product2); // {name: 'shirt', delivery-time: '1 day'}
+     console.log(product2.name); // shirt
+     console.log(product2['name']); // shirt
+     console.log(product2['delivery-time']); // 1 day
+     console.log(product2.rating.count);
+     product2.fun(); // function inside object
+
+     console.log(typeof console); // object
+     console.log(typeof console.log); // function
+
+     console.log(JSON.stringify(product2)) // {"name":"shirt","delivery-time":"1 day","rating":{"stars":4.5,"count":87}}, this will convert the object into Jason, which is a string
+
+     const jsonString = JSON.stringify(product2);
+     console.log(JSON.parse (jsonString)); // {"name":"shirt","delivery-time":"1 day","rating":{"stars":4.5,"count":87}} jason.pars will turn the Jason string back
+    </script>
+  </body>
+</html>
