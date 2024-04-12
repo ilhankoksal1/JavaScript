@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>8i head and tails</head>
+  <body>
+    <p>
+
+ 
+    <button onclick="
+    playgame('heads');
+    ">heads</button>;
+
+    <button onclick="
+    playgame('tails')
+    ">tails</button>
+
+</p>
+    <script>
+      const randomNumber = Math.random();
+      let result;
+
+      function playgame (guess){
+        if (randomNumber < 0.5) {
+        result = 'heads';
+      } else {
+        result = 'tails';
+      }
+
+   
+      if (guess === result) {
+        console.log('You win!');
+      } else {
+        console.log('You lose!');
+      }  
+      }
+    
+    </script>
+  </body>
+</html>
