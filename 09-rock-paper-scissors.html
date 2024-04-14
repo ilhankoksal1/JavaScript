@@ -33,12 +33,17 @@
     " >Reset Score</button>
 
       <script>
-        let score= JSON.parse(localStorage.getItem('score')) || {
-          wins: 0,
-          loses: 0,
-          ties: 0 
-        };
-         updateScoreElement();
+        let score= JSON.parse(localStorage.getItem('score'));
+
+        if (score === null) {
+          score = {
+              wins: 0,
+              loses: 0,
+              ties: 0
+             }
+            }
+
+            updateScoreElement();
 
         function playGame(playerMove) {
           const computerMove = pickComputerMove();
@@ -85,21 +90,19 @@
           }
 
           localStorage.setItem('score', JSON.stringify(score));
-       
+
           updateScoreElement();
 
-          document.querySelector('.js-result').
-          innerHTML = `${result}`;
+          document.querySelector('.js-result').innerHTML=result;
 
-          document.querySelector('.js-moves').innerHTML = `You ${playerMove} - ${computerMove} Computer`;
+          document.querySelector('.js-moves').innerHTML=`You ${playerMove}- ${computerMove} Computer`;
 
          }
 
-         function updateScoreElement() {
+         function updateScoreElement () {
           document.querySelector('.js-score')
-          .innerHTML = `wins:${score.wins}, Loses:${score.loses}, Ties:${score.ties}`;
+            .innerHTML=`wins:${score.wins}, Loses:${score.loses}, Ties:${score.ties}`;
          }
-         
 
         function pickComputerMove() {
         const randomNumber = Math.random();
