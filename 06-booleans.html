@@ -5,6 +5,7 @@
     </head>
     <body>
         <script>
+            /*
             true
             false
             console.log(3 > 5-5); 
@@ -26,6 +27,86 @@
             } else {
                 console.log('You can not drive')
                 }
+                */
+          /*      
+          console.log(true && true); 
+          console.log(0.2 >= 0 && 0.2 < 1/3)
+          
+          console.log(true || false); //So it checks if the left side is true or the right side is true, that's why it's called the OR operator. So here one of these sides is true. So the OR operator will result in true 
+          console.log(!true) //So the exclamation is called NOT oper operator. The NOT operator only uses one boolean value and it flips it. So if this value is true, the knot operator will flip it into false. if we say that something is not true, that's the same thing as saying that it is false.
+          */
+
+          /*
+
+          if (5) {  
+          console.log('truthy');
+          }       
+          'truthy'
+          // If we save the number five behaves just like true, it causes the if statement   to run this code. So we call this value a truthy value because it behaves just like true.
+
+          if (0) {  
+          console.log('truthy');
+          }
+          
+          //  the number zero behaves just like false, it causes the if statement to not run this code. We call this value zero a falsey value because it behaves just like false.
+
+          const cartQuantity = 5;
+          if (cartQuantity > 0) {
+            console.log('cart has products');
+          }
+
+          // instead of doing this comparationt, just type cart quantity and it will behave the same way. If the cart quantity is not zero, they will both behave like true.
+
+      
+          if (cartQuantity) {
+            console.log('cart has products');
+          }
+
+          console.log(!0);
+          'true'
+
+          // 0 behaves just like false so the NOT operator will flip it into truth. If we save, this will display truth.
+          
+          //The next falsy value is NaN (Not a Number), which means not a number. We get nan if we do some invalid math
+
+          console.log('text' / 5);
+          'NaN'
+
+          //Undefined represents that something doesn't have a value.
+
+          let variable1;
+          console.log(variable1);
+          'undefined'
+          // if we create a variable with let variable1  and we don't give it a value and then we console dot log this variable and we save, it will show us that variable1 contains the value undefined.
+
+          //  we can only use this syntax with let, we can't use it with const. If we really want to use this with const we have to type out equals undefined directly.
+
+          const variable1 = undefined;
+          console.log(variable1);
+          'undefined'
+        
+         // true ? 'truthy' : 'falsy'  like shortcut if (true) { 'truthy'} else {'falsy'}
+
+        const result = true ? 'truthy' : 'falsy'; 
+        console.log(result);
+        'truthy'
+
+          // So this is the ternary operator. This is similar to an if else statement. The first value is like the condition, if it's truthy, the result of this code is a value after the question mark. If the first value is falsey, the result of this code is the value after the colon. an advantage of the ary operator over an if statement is that we can save a ary operator in a variable.
+
+        const result = 0 ? 'truthy' : 'falsy'; 
+        console.log(result);
+        'falsy'
+
+     */
+    const message = 5 && 'hello';
+    console.log(message);
+    
+    const currency = undefined || 'USD';
+    console.log(currency);  
+    'USD'
+
+
+
         </script>
     </body>
 </html>
