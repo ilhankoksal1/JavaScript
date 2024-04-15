@@ -15,6 +15,14 @@
         return false;
       }
     }
+    //Here is alternaive solution that uses less code.
+    function isSameProduct(product1, product2) {
+      return (
+        product1.name === product2.name &&
+        product1.price === product2.price
+      );
+    }
+
     const product1 = {
       name : 'basketball',
       price : 2095
