@@ -5,14 +5,14 @@
   </head>
   <body>
     <script>
-      /*
+     /* 
       const product= {
         name: 'socks',
         price: 1090
       };
       console.log(product); // {name: 'socks', price: 1090}
       console.log(typeof product); // object
-      console.log(product.name); // name
+      console.log(product.name); // 'socks'
       console.log(product.price); // 1090
       //  vvv  to change the value associated with the nameproperty to cotton socks. vvv // 
       product.name ='cottton socks'; 
@@ -23,6 +23,7 @@
       delete product.newProperty; //delete new property from the object.
       console.log(product); // {name: 'cottton socks', price: 1090}
       */
+     
      const product2 = {
         name: 'shirt',
         ['delivery-time']: '1 day',
@@ -30,24 +31,76 @@
           stars: 4.5,
           count: 87
         },
-        fun: function function1(){ //functions are also values and we can save them in an object. 
+        fun: function function1(){ 
           console.log('function inside object');
         }
+        
      };
      console.log(product2); // {name: 'shirt', delivery-time: '1 day'}
      console.log(product2.name); // shirt
      console.log(product2['name']); // shirt
      console.log(product2['delivery-time']); // 1 day
-     console.log(product2.rating.count);
+     console.log(product2.rating.count); // 87
      product2.fun(); // function inside object
 
      console.log(typeof console); // object
      console.log(typeof console.log); // function
+    
 
      console.log(JSON.stringify(product2)) // {"name":"shirt","delivery-time":"1 day","rating":{"stars":4.5,"count":87}}, this will convert the object into Jason, which is a string
 
      const jsonString = JSON.stringify(product2);
-     console.log(JSON.parse (jsonString)); // {"name":"shirt","delivery-time":"1 day","rating":{"stars":4.5,"count":87}} jason.pars will turn the Jason string back
+     console.log(JSON.parse (jsonString)); // {name: 'shirt', delivery-time: '1 day', rating: {…}} jason.pars will turn the Jason string back
+    
+    console.log('hello'.length);
+     // => 5, So strings can also have properties. The length property tells us how many characters or letters are in this string. So hello has five letters.
+     console.log('hello'.toUpperCase()); 
+     // => HELLO, his method gives us a copy of the string with all letters capitalized or in upper case
+
+     const object1 = {
+      messsage: 'hello'
+     };
+
+     // This variable 'hello' actually just gets a reference that points to that location. In the computer's memory, this is like a shortcut on your computer, a shortcut points to where the actual file or folder is.
+
+     const object2 = object1;
+
+     object1.messsage = 'Good job!';
+     console.log (object1); // => 'Good job!'
+     console.log(object2); // => 'Good job!'
+
+     const object3 = {
+      messsage: 'Good job!'      
+     };
+     console.log(object3 === object1); // => false, it will tell us that these two objects are not equal to each other even though they have these same values inside. And that's because remember objects are references. So Object3 also contains a reference, and this code compares the references and not the values inside the object. So because object3 has a different reference than Object1, that's why this code results in false
+
+     console.log(object2 === object1); // ==> true, this will tell us that these two variables have the same reference. If we want to compare the values inside, we would do that manually by checking the message property against this message property. 
+
+     const object4 = {
+      messsage: 'Good job!',  
+      price: 799    
+     };
+     // const messsage = object4.messsage;
+     const {messsage, price} =object4; // this code is shortcut of obove, So this shortcut is called destructuring. This will take the message property out of object four and save it in a variable called message. 
+     console.log(messsage);
+     console.log(price);
+
+     const object5 = {
+      // messsage: messsage
+      messsage,
+      method: function function1() {
+      console.log('method');
+      }
+      // method: (){
+      //  console.log('method') 
+      //}
+     }; //shortcut for above 3 lines, So this shortcut is called the shorthand method syntax,
+     // it takes whatever is inside the message variable and substitutes it into this code
+
+     // If the property and the variable name are the same,  we can actually just type it out once like message. his shortcut is called the shorthand property.
+     console.log(object5);
+     object5.method();
+
     </script>
   </body>
 </html>
