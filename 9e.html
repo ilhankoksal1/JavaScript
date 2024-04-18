@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>9d-unput</title>
+    </head>
+    <body>
+    <input placeholder="name" class="js-name-input"
+    onkeydown="handlelNameKeyDown(event)
+    ">
+    
+    <button onclick="
+     handlelNameKeyDown(event);
+    ">Submit</button>
+    
+    <p class="js-message"></p>
+
+    <script>
+      function handlelNameKeyDown(event)
+        {
+      const inputElement = document.querySelector('.js-name-input');
+      document.querySelector('.js-message')
+        .innerHTML=`Your name is ${inputElement.value}`; 
+        }
+    </script>
+
+    </body>
+</html>
+
+
