@@ -17,3 +17,13 @@ function displayCalculation() {
   document.querySelector('.js-calculation')
     .innerHTML = calculation;
 }
+
+function d(){
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+  }
+  let a = 1
+  a = "ozan"
+  a = [1,2,3]
+}
